@@ -3,10 +3,10 @@ import './Home.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Organic from '../../Public/Images/Organic.png'
-import Delivery from '../../Public/Images/FastDelivery.png'
+import Delivery from '../../Public/Images/FastestDelivery.png'
 import Support from '../../Public/Images/24Hrs.png'
 import HighQuality from '../../Public/Images/HighQuality.png'
-import CategoryCard from "'../Card/CategoryCard'";
+import CategoryCard from '../Card/CategoryCard.jsx';
 import ProductCard from '../Card/ProductCard'
 import Capsicum from '../../Public/Images/Capsicum.jpg'
 import Tomato from '../../Public/Images/Tomato.jpg'
