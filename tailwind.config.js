@@ -12,7 +12,7 @@ export default {
       },
       backgroundImage:{
         VegetableImageOne:'url("../src/Public/Images/HomePageBackground1.jpg")',
-        VegetableImageTwo:"url('./src/Public/Images/HomePageBackground2.jpg')",
+        VegetableImageTwo:"url('../src/Public/Images/HomePageBackground2.jpg')",
         Strawberry:"url('../src/Public/Images/CardStrawberry.jpg')",
         CardJuice:"url('../src/Public/Images/CardJuices.jpg')",
         DryFruits:"url('../src/Public/Images/DryFruits.jpg')",
