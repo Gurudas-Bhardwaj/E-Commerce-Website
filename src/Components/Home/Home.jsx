@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react'
 import './Home.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Organic from '../Assests/HomePageImage/Organic.png'
-import Delivery from '../Assests/HomePageImage/FastestDelivery.png'
-import Support from '../Assests/HomePageImage/24Hrs.png'
-import HighQuality from '../Assests/HomePageImage/HighQuality.png'
-import CategoryCard from '../Card/CategoryCard';
+import Organic from '../../Public/Images/Organic.png'
+import Delivery from '../../Public/Images/FastDelivery.png'
+import Support from '../../Public/Images/24Hrs.png'
+import HighQuality from '../../Public/Images/HighQuality.png'
+import CategoryCard from "'../Card/CategoryCard'";
 import ProductCard from '../Card/ProductCard'
-import Capsicum from '../Assests/HomePageImage/Capsicum.jpg'
-import Tomato from '../Assests/HomePageImage/Tomato.jpg'
-import Mint from '../Assests/HomePageImage/Mint.jpg'
+import Capsicum from '../../Public/Images/Capsicum.jpg'
+import Tomato from '../../Public/Images/Tomato.jpg'
+import Mint from '../../Public/Images/Mint.jpg'
 
 
 function Home() {
