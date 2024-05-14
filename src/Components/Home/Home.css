@@ -1,0 +1,6 @@
+.BgGradient{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+.trans{
+    transition: all 0.3s ease-in-out;
+}

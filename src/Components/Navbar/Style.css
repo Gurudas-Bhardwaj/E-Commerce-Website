@@ -1,0 +1,32 @@
+@media (min-width:767px) {
+    .hamburg{
+        display: none;
+    }
+    
+}
+@media (max-width:767px) {
+    .Navlink{
+        display: none;
+
+    }
+    
+}
+.trans{
+  z-index: 999999999999999;
+  
+}
+.flex {
+    transition: all 0.3s ease;
+  }
+  
+.expand {
+  height: 224px;
+}
+
+.collapse {
+  height: 0;
+  overflow: hidden;
+}
+  
+
+
