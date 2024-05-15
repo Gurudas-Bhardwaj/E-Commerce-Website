@@ -23,7 +23,7 @@ function Home() {
       AOS.init({
         once: true,
         enable: "phone",
-        duration: 1000,
+        duration: 700,
         easing: "ease-out-cubic",
       });
     }, []);
@@ -74,9 +74,7 @@ function Home() {
     },[])
 
 
-   useEffect(()=>{
-
-   },[])
+   
 
   return (
     <div>
@@ -168,24 +166,34 @@ function Home() {
             <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' DiscountedPrice="₹18/100gm" RealPrice='₹22' />
           </div>
         </div>
-        <div className=' w-screen h-screen flex mt-14 flex-col  items-center'>
+        <div className=' w-screen  flex mt-14 flex-col  items-center'>
           <div className='w-screen pt-5 pb-14 flex justify-center items-center text-center'>
               <h1 className='font-Pacifico text-lime-500 text-2xl md:text-5xl pb-3 pt-3'>See What Our Customer Says</h1>
           </div> 
           <div className='w-screen relative flex flex-col gap-14  justify-center items-center'>
             
-            <div className='flex gap-10  overflow-auto scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider'>
+            <div className='flex gap-10  overflow-auto scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider ' data-aos="flip-up">
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Monkey D.Luffy" Image="https://vignette.wikia.nocookie.net/fairypirates/images/5/5f/Monkey_D._Luffy.png/revision/latest?cb=20161022094701"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>    
               </div>
-            <div className='flex gap-10  overflow-auto  scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider'>
+            <div className='flex gap-10  pb-16 overflow-auto  scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider' data-aos="flip-up">
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Monkey D.Luffy" Image="https://vignette.wikia.nocookie.net/fairypirates/images/5/5f/Monkey_D._Luffy.png/revision/latest?cb=20161022094701"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>    
               </div>
             </div>
         </div>
+            <div className='w-screen h-56 font-Popins flex text-center items-center flex-col justify-center  md:flex-row mt-4  bg-stone-300 gap-8 md:gap-20'>
+              <div className='flex flex-col '>
+                  <h1 className='text-2xl md:text-left font-medium'>Subcribe to our Newsletter</h1>
+                  <h4 className='text-base md:text-left'>Get e-mail updates about our latest shops and special offers</h4>
+              </div>
+              <div className='flex'>
+                  <input type="text" className='h-8  w-52 md:w-72'/>
+                  <button className='h-8 w-24 md:w-36 bg-lime-500 text-lg '>Subcribe</button>
+              </div>
+            </div>
 
 
     </div>
