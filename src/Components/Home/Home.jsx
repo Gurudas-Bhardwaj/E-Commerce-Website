@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import './Home.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Organic from '../../Public/Images/Organic.png'
@@ -12,7 +11,6 @@ import Capsicum from '../../Public/Images/Capsicum.jpg'
 import Tomato from '../../Public/Images/Tomato.jpg'
 import Mint from '../../Public/Images/Mint.jpg'
 import CustomerSays from '../Card/CustomerSays.jsx';
-import { FaChevronCircleLeft,FaChevronCircleRight } from "react-icons/fa";
 
 
 function Home() {

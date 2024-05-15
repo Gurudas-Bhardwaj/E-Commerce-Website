@@ -3,6 +3,8 @@ import { IoMenu } from 'react-icons/io5';
 import { MdShoppingCart } from 'react-icons/md';
 import '../Navbar/Style.css';
 import { Context } from '../../Context/Context';
+import { NavLink } from 'react-router-dom';
+
 
 function Navbar() {
   
@@ -44,15 +46,15 @@ function Navbar() {
             className='flex Navlink w-3/5 justify-evenly items-center text-white font-bold text-lg z-50'
             style={{ marginLeft: '6%' }}
           >
-            <a href=''>Home</a>
-            <a href=''>Shop</a>
-            <a href=''>About</a>
-            <a href=''>Blog</a>
-            <a href=''>Contact</a>
-            <a href='' className='text-white flex text-2xl'>
+            <NavLink to='' className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`}  >Home</NavLink>
+            <NavLink  to="/Shop" className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >Shop</NavLink>
+            <NavLink className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >About</NavLink>
+            <NavLink className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >Blog</NavLink>
+            <NavLink className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >Contact</NavLink>
+            <NavLink className={({isActive})=> ` text-white flex text-2xl ${isActive ? 'text-gray-300':'text-gray-200'}`} >
               <MdShoppingCart />
               <span className='text-base'>0</span>
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className={`flex nav flex-col w-full gap-2 bg-gray-200 *:pl-3 ${click ? 'expand' : 'collapse'}`}>
@@ -60,17 +62,17 @@ function Navbar() {
             id='anchortag'
             className={`flex flex-col h-full w-full gap-2 *:font-bold *:pl-3 *:text-white bg-black ${click ? 'show' : 'hide'}`}
           >
-            <a href='' onClick={new_click} className='mt-3 '>
+            <NavLink to='' className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'} mt-3`} onClick={new_click} >
               Home
-            </a>
-            <a href='' onClick={new_click}>Shop</a>
-            <a href='' onClick={new_click}>About</a>
-            <a href='' onClick={new_click}>Blog</a>
+            </NavLink>
+            <NavLink to='/Shop' className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click}>Shop</NavLink>
+            <NavLink   className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click}>About</NavLink>
+            <NavLink className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click}>Blog</NavLink>
             <p onClick={new_click}>Contact</p>
-            <a onClick={new_click} className='text-gray-700 flex text-2xl '>
+            <NavLink className={({isActive})=>` text-gray-700 flex text-2xl  ${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click} >
               <MdShoppingCart />
               <span className='text-base'>0</span>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
