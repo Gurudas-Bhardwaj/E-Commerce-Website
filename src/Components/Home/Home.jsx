@@ -11,6 +11,8 @@ import ProductCard from '../Card/ProductCard'
 import Capsicum from '../../Public/Images/Capsicum.jpg'
 import Tomato from '../../Public/Images/Tomato.jpg'
 import Mint from '../../Public/Images/Mint.jpg'
+import CustomerSays from '../Card/CustomerSays.jsx';
+import { FaChevronCircleLeft,FaChevronCircleRight } from "react-icons/fa";
 
 
 function Home() {
@@ -21,7 +23,7 @@ function Home() {
       AOS.init({
         once: true,
         enable: "phone",
-        duration: 700,
+        duration: 1000,
         easing: "ease-out-cubic",
       });
     }, []);
@@ -135,7 +137,7 @@ function Home() {
           <div className='p'>
             <h1 className='font-Pacifico text-3xl  md:text-5xl text-lime-500' data-aos='zoom-in'>Shop By Category</h1>
           </div>
-            <div className='flex justify-evenly scroll-smooth mt-16 overflow-auto gap-10' id='Slider' style={{width:"85%",scrollbarWidth:"none"}} data-aos="flip-down">
+            <div className='flex justify-evenl w-screen scroll-smooth mt-16 overflow-auto gap-10' id='Slider' style={{width:"89%",scrollbarWidth:"none"}} data-aos="flip-down">
               <CategoryCard Background="bg-CardVegetable" Title="Vegetable"/>
               <CategoryCard Background="bg-Fruits" Title="Fruits"/>
               <CategoryCard Background="bg-Almonds" Title="Dry Fruits"/>
@@ -150,16 +152,32 @@ function Home() {
           <div className='mt-10 mb-5 w-screen flex flex-col justify-center items-center'>
             <span className='font-Pacifico pb-3 text-lime-500 pt-14 text-center text-4xl md:text-6xl' data-aos="fade-down-right">Great Deal Section</span>
           </div>
-          <div className=' flex flex-col justify-evenly md:flex-row mt-5 mb-5' data-aos="fade-down-left" style={{width:"85%"}}>
+          <div className=' flex flex-col justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-left" style={{width:"85%"}}>
             <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' DiscountedPrice="₹60/Kg" RealPrice='₹110' />
             <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' DiscountedPrice="₹30/Kg" RealPrice='₹60' />
             <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' DiscountedPrice="₹18/100gm" RealPrice='₹22' />
           </div>
-          <div className=' flex flex-col md:justify-evenly md:flex-row mt-5 mb-5' data-aos="fade-down-right" style={{width:"85%"}}>
+          <div className=' flex flex-col md:justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-right" style={{width:"85%"}}>
             <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' DiscountedPrice="₹60/Kg" RealPrice='₹110' />
             <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' DiscountedPrice="₹30/Kg" RealPrice='₹60' />
             <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' DiscountedPrice="₹18/100gm" RealPrice='₹22' />
           </div>
+        </div>
+        <div className=' w-screen h-screen flex mt-14 flex-col relative items-center'>
+          <div className='w-screen pt-5 pb-14 flex justify-center items-center text-center'>
+              <h1 className='font-Pacifico text-lime-500 text-2xl md:text-5xl pb-3 pt-3'>See What Our Customer Says</h1>
+          </div> 
+              <FaChevronCircleLeft className='absolute  h-14 w-8 cursor-pointer' style={{top:"38%",left:'7%'}}/>
+              <FaChevronCircleRight className='absolute  h-14 w-8 cursor-pointer' style={{top:"38%",left:'90%'}} />
+          <div className='flex gap-10  overflow-auto scroll-smooth' style={{width:"80%",scrollbarWidth:"none"}}>
+              <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Monkey D.Luffy" Image="https://vignette.wikia.nocookie.net/fairypirates/images/5/5f/Monkey_D._Luffy.png/revision/latest?cb=20161022094701"/>  
+              <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
+              <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>  
+              <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Monkey D.Luffy" Image="https://vignette.wikia.nocookie.net/fairypirates/images/5/5f/Monkey_D._Luffy.png/revision/latest?cb=20161022094701"/>  
+              <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
+              <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>  
+            </div> 
+          
         </div>
     </div>
   )
