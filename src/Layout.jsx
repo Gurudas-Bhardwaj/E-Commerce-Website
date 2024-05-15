@@ -23,6 +23,7 @@ const Layout = () => {
         <Navbar />
         <TopNavbar/>
         <Home/>
+        <Layout/>
       </div>
       </Context.Provider>
   );

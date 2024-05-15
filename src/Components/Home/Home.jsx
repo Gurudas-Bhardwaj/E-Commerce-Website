@@ -79,8 +79,8 @@ function Home() {
   return (
     <div>
       <div >
-        <div className={`${Vegetable} trans bg-cover h-screen  bg-center`}  >
-            <div className='w-full h-full BgGradient flex justify-center items-center'>
+        <div className={`${Vegetable}  bg-cover h-screen  ease-in-out duration-300 bg-center`}  >
+            <div className='w-full h-full  flex justify-center items-center bg-gradient-to-r from-black/50 via-black/40 to-black/30 '  >
                 <div className='flex flex-col justify-center items-center w-screen' data-aos="fade-down-right">
                     <span className='font-Pacifico text-3xl  md:text-6xl text-white font-bold text-center'>We Serve Fresh Vegetables & Fruits</span>
                     <span className='text-center font-Popins text-white pt-2 md:pt-10  text-base md:text-2xl'>We Deliver Fresh & Organic Vegetables</span>
@@ -186,7 +186,7 @@ function Home() {
         </div>
             <div className='w-screen h-56 font-Popins flex text-center items-center flex-col justify-center  md:flex-row mt-4  bg-stone-300 gap-8 md:gap-20'>
               <div className='flex flex-col '>
-                  <h1 className='text-2xl md:text-left font-medium'>Subcribe to our Newsletter</h1>
+                  <h1 className='text-2xl md:text-left font-medium md:pb-2'>Subcribe to our Newsletter</h1>
                   <h4 className='text-base md:text-left'>Get e-mail updates about our latest shops and special offers</h4>
               </div>
               <div className='flex'>
