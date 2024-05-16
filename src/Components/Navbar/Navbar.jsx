@@ -1,81 +1,68 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { IoMenu } from 'react-icons/io5';
-import { MdShoppingCart } from 'react-icons/md';
+import { TfiMenu } from "react-icons/tfi";
+import { FaBagShopping } from "react-icons/fa6";
 import '../Navbar/Style.css';
 import { Context } from '../../Context/Context';
 import { NavLink } from 'react-router-dom';
+import { FaRegUserCircle } from "react-icons/fa";
 
 
 function Navbar() {
   
   const windowScroll = useContext(Context);
-  const [click, setClick] = useState(false);
   
-
-  const [Position,SetPosition]=useState('')
-  useEffect(()=>{
-    if (windowScroll<600){
-      SetPosition("sticky")
-    }else if(windowScroll>=600){
-      SetPosition("fixed")
-    }
-    
-  },[windowScroll])
-  
-
-  const clickFunction = () => {
-    setClick((prevState) => !prevState);
-  };
-
-  const new_click = () => {
-    setClick((prevState) => !prevState);
-  };
 
   return (
     <>
-     <div className={`Position overflow-hidden ${Position} transition-all duration-300 ease-in-out trans`}>
+    <header>
+        <div className='*:font-Popins  w-screen h-24 md:h-28 flex  items-center '>
+          <div className=' w-4/5 md:w-2/5  flex pl-3 md:pl-0 md:justify-center items-center'>
+            <h1 className='text-4xl md:text-5xl p-3 text-lime-500 font-bold '>VegeFoods</h1>
+          </div>
+          <div className='flex w-3/5 Navlink'>
+            <div className='flex gap-16 text-lg pt-1'>
+              <NavLink to='' className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"}`} >
+                Home
+              </NavLink>
+              <NavLink to="/Shop" className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"} `}>
+                Shop
+              </NavLink>
+              <NavLink to="/dsf" className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"} `}>
+                About Us
+              </NavLink>
+              <NavLink to="/p" className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"} `}>
+                Contact Us
+              </NavLink>
+            </div>
+            <div className='flex gap-8' style={{paddingLeft:"17%"}}>
+              <NavLink className={'relative'}><FaBagShopping className=' h-9 w-9 text-lime-500'/><span className='absolute z-10  w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white' style={{right:"-25%",top:"-26%"}}>0</span></NavLink>
+              <NavLink><FaRegUserCircle className= ' h-9 w-9 text-lime-500'/></NavLink>
 
-        <div className='*:font-Popins h-16 bg-black   top-0 left-0  w-screen border-2 border-black flex '>
-          <div className='h-full  w-3/4 md:w-2/6 flex pl-2 md:justify-center items-center trans'>
-            <h1 className='text-2xl font-bold text-lime-500'>VEGEFOOD </h1>
+            </div>
           </div>
-          <div className='h-full flex w-10 hamburg items-center' style={{ marginLeft: '10%' }}>
-            <IoMenu className='text-white text-4xl ' onClick={clickFunction} />
-          </div>
-          <div
-            className='flex Navlink w-3/5 justify-evenly items-center text-white font-bold text-lg z-50'
-            style={{ marginLeft: '6%' }}
-          >
-            <NavLink to='' className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`}  >Home</NavLink>
-            <NavLink  to="/Shop" className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >Shop</NavLink>
-            <NavLink className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >About</NavLink>
-            <NavLink className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >Blog</NavLink>
-            <NavLink className={({isActive})=>`${isActive ? 'text-white':'text-gray-300'}`} >Contact</NavLink>
-            <NavLink className={({isActive})=> ` text-white flex text-2xl ${isActive ? 'text-gray-300':'text-gray-200'}`} >
-              <MdShoppingCart />
-              <span className='text-base'>0</span>
-            </NavLink>
-          </div>
+            <div className='hamburg ' style={{marginLeft:""}}><TfiMenu className='h-10 text-lime-500 font-bold w-10' /></div>
         </div>
-        <div className={`flex nav flex-col w-full gap-2 bg-gray-200 *:pl-3 ${click ? 'expand' : 'collapse'}`}>
-          <div
-            id='anchortag'
-            className={`flex flex-col h-full w-full gap-2 *:font-bold *:pl-3 *:text-white bg-black ${click ? 'show' : 'hide'}`}
-          >
-            <NavLink to='' className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'} mt-3`} onClick={new_click} >
-              Home
-            </NavLink>
-            <NavLink to='/Shop' className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click}>Shop</NavLink>
-            <NavLink   className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click}>About</NavLink>
-            <NavLink className={({isActive})=>`${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click}>Blog</NavLink>
-            <p onClick={new_click}>Contact</p>
-            <NavLink className={({isActive})=>` text-gray-700 flex text-2xl  ${isActive ? 'text-black':'text-gray-700'}`} onClick={new_click} >
-              <MdShoppingCart />
-              <span className='text-base'>0</span>
-            </NavLink>
-          </div>
+        <div className='w-screen  '>
+            <div className='flex flex-col text-lg pl-6 gap-2'>
+            <NavLink to='' className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"} `} >
+                Home
+              </NavLink>
+              <NavLink to="/Shop" className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"} `}>
+                Shop
+              </NavLink>
+              <NavLink to="/dsf" className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"} `}>
+                About Us
+              </NavLink>
+              <NavLink to="/p" className={({isActive})=>` ${isActive?"text-lime-400":"text-gray-600"} pb-7 `}>
+                Contact Us
+              </NavLink>
+            </div>
+            <div className='flex pl-5 gap-6 pb-5'>
+            <NavLink className={'relative'}><FaBagShopping className=' h-9 w-9 text-lime-500'/><span className='absolute z-10  w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white' style={{right:"-25%",top:"-26%"}}>0</span></NavLink>
+              <NavLink><FaRegUserCircle className= ' h-9 w-9 text-lime-500'/></NavLink>
+            </div>
         </div>
-      </div>
+      </header>
     </>
   );
 }

@@ -11,11 +11,14 @@ import Capsicum from '../../Public/Images/Capsicum.jpg'
 import Tomato from '../../Public/Images/Tomato.jpg'
 import Mint from '../../Public/Images/Mint.jpg'
 import CustomerSays from '../Card/CustomerSays.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function Home() {
     const [Vegetable,SwitchVegetable]=useState("bg-VegetableImageOne")
-
+    const notify = () => toast("Succesfully Subcribe");
 
     useEffect(() => {
       AOS.init({
@@ -188,10 +191,12 @@ function Home() {
                   <h4 className='text-base md:text-left'>Get e-mail updates about our latest shops and special offers</h4>
               </div>
               <div className='flex'>
-                  <input type="text" className='h-8  w-52 md:w-72'/>
-                  <button className='h-8 w-24 md:w-36 bg-lime-500 text-lg '>Subcribe</button>
+                  <input type="text" required className='h-8 pl-2 w-52 md:w-72'/>
+                  <button className='h-8 w-24 md:w-36 bg-lime-500 text-lg ' onClick={notify}>Subcribe</button>
               </div>
             </div>
+                  <ToastContainer position="bottom-right" style={{zIndex:"99999999999999999"}} />
+                  
 
 
     </div>

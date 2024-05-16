@@ -21,8 +21,8 @@ const Layout = () => {
   return (
     <Context.Provider value={windowScroll}>
       <div className="overflow-hidden">
-        <Navbar />
         <TopNavbar/>
+        <Navbar />
         <Outlet/>
         <Footer/>
       </div>
