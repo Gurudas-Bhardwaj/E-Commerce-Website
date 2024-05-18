@@ -141,7 +141,7 @@ function Home() {
           <div className='p'>
             <h1 className='font-Pacifico text-3xl  md:text-5xl text-lime-500' data-aos='zoom-in'>Shop By Category</h1>
           </div>
-            <div className='flex justify-evenl w-screen scroll-smooth mt-16 overflow-auto gap-10' id='Slider' style={{width:"89%",scrollbarWidth:"none"}} data-aos="flip-down">
+            <div className='flex justify-evenl w-screen scroll-smooth mt-16 overflow-auto gap-10' id='Slider' style={{width:"86%",scrollbarWidth:"none"}} data-aos="flip-down">
               <CategoryCard Background="bg-CardVegetable" Title="Vegetable"/>
               <CategoryCard Background="bg-Fruits" Title="Fruits"/>
               <CategoryCard Background="bg-Almonds" Title="Dry Fruits"/>
@@ -156,15 +156,17 @@ function Home() {
           <div className='mt-10 mb-5 w-screen flex flex-col justify-center items-center'>
             <span className='font-Pacifico pb-3 text-lime-500 pt-14 text-center text-4xl md:text-6xl' data-aos="fade-down-right">Great Deal Section</span>
           </div>
-          <div className=' flex flex-col justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-left" style={{width:"85%"}}>
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' DiscountedPrice="₹60/Kg" RealPrice='₹110' />
-            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' DiscountedPrice="₹30/Kg" RealPrice='₹60' />
-            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' DiscountedPrice="₹18/100gm" RealPrice='₹22' />
+          <div className='w-11/12 flex flex-col justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-left" >
+            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60" Quantity="5kg" RealPrice='₹110' />
+            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30" Quantity="1kg" RealPrice='₹60' />
+            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
+            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
           </div>
-          <div className=' flex flex-col md:justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-right" style={{width:"85%"}}>
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' DiscountedPrice="₹60/Kg" RealPrice='₹110' />
-            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' DiscountedPrice="₹30/Kg" RealPrice='₹60' />
-            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' DiscountedPrice="₹18/100gm" RealPrice='₹22' />
+          <div className='w-11/12 flex flex-col md:justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-right" >
+            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60"  Quantity="5kg"/>
+            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60"  Quantity="5kg"/>
+            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30"  Quantity="1kg" />
+            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
           </div>
         </div>
         <div className=' w-screen  flex mt-14 flex-col  items-center'>
@@ -186,11 +188,11 @@ function Home() {
             </div>
         </div>
             <div className='w-screen h-56 font-Popins flex text-center items-center flex-col justify-center  md:flex-row mt-4  bg-stone-300 gap-8 md:gap-20'>
-              <div className='flex flex-col '>
+              <div className='flex flex-col ' data-aos="fade-right">
                   <h1 className='text-2xl md:text-left font-medium md:pb-2'>Subcribe to our Newsletter</h1>
                   <h4 className='text-base md:text-left'>Get e-mail updates about our latest shops and special offers</h4>
               </div>
-              <div className='flex'>
+              <div className='flex' data-aos="fade-left">
                   <input type="text" required className='h-8 pl-2 w-52 md:w-72'/>
                   <button className='h-8 w-24 md:w-36 bg-lime-500 text-lg ' onClick={notify}>Subcribe</button>
               </div>

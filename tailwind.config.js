@@ -21,6 +21,7 @@ export default {
         CardVegetable:"url('../src/Public/Images/CardVegetable.jpg')",
         Juice:"url('../src/Public/Images/Juice.jpg')",
         Almonds:"url('/./src/Public/Images/Almonds.jpg')",
+        ShopBackground:"url('../src/Public/Shop/Background.jpg')"
       }
     },
   },

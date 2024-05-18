@@ -1,17 +1,32 @@
-@media (min-width:1000px) {
-    .hamburg{
-        display: none;
+@media (min-width: 1000px) {
+    .hamburg {
+      display: none;
     }
-    
-}
-@media (max-width:1000px) {
-    .Navlink{
-        display: none;
-
-    }
-    
-}
-
+  }
   
+  @media (max-width: 1000px) {
+    .Navlink {
+      display: none;
+    }
+  }
+  
+  .expand {
+    display: block;
+    max-height: 500px; /* Adjust based on content */
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .minimize {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
 
-
+.fixed{
+  top: 0;
+  background: black;
+  box-shadow:  black;
+  transition: all 0.2s ease-in-out;
+}
+  

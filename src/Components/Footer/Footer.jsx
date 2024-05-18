@@ -23,7 +23,7 @@ function Footer() {
               <div className='flex flex-col gap-2 md:pt-5 md:pb-5  '>
                 <div className='flex flex-col  gap-3'>
                   <h1 className='font-medium text-xl  '>Menu</h1>
-                    <Link className="mt-4">Shop</Link>
+                    <Link className="mt-4" to="/Shop">Shop</Link>
                     <Link>About</Link>
                     <Link>Journal</Link>
                     <Link>Contact Us</Link>
