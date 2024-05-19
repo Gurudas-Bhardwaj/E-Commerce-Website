@@ -66,25 +66,25 @@ function Navbar() {
             <TfiMenu className="h-7 w-7 md:ml-96 md:h-10 text-lime-500 font-bold md:w-10" />
           </div>
         </div>
-        <div className={`w-screen transition-all duration-300 ease-in-out  ${toggle}`}>
-          <div className="flex flex-col text-lg pl-6 gap-2">
-            <NavLink to="" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-gray-600"}`} onClick={handleNavLinkClick}>
+        <div className={`w-screen transition-all bg-black duration-300 ease-in-out  ${toggle}`}>
+          <div className="flex flex-col text-lg pl-6  gap-2">
+            <NavLink to="" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pt-5`} onClick={handleNavLinkClick}>
               Home
             </NavLink>
-            <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-gray-600"}`} onClick={handleNavLinkClick}>
+            <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
               Shop
             </NavLink>
-            <NavLink to="/dsf" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-gray-600"}`} onClick={handleNavLinkClick}>
+            <NavLink to="/dsf" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
               About Us
             </NavLink>
-            <NavLink to="/p" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-gray-600"} pb-7`} onClick={handleNavLinkClick}>
+            <NavLink to="/p" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pb-7`} onClick={handleNavLinkClick}>
               Contact Us
             </NavLink>
           </div>
           <div className="flex pl-5 gap-6 pb-5">
             <NavLink className="relative" onClick={handleNavLinkClick}>
               <FaBagShopping className="h-9 w-9 text-lime-500" />
-              <span className="absolute z-10 w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>0</span>
+              <span className="absolute z-10 w-6 h-6 flex justify-center border border-lime-400 rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>3</span>
             </NavLink>
             <NavLink onClick={handleNavLinkClick}>
               <FaRegUserCircle className="h-9 w-9 text-lime-500" />

@@ -24,7 +24,7 @@ function Home() {
       AOS.init({
         once: true,
         enable: "phone",
-        duration: 700,
+        duration: 600,
         easing: "ease-out-cubic",
       });
     }, []);
@@ -156,13 +156,13 @@ function Home() {
           <div className='mt-10 mb-5 w-screen flex flex-col justify-center items-center'>
             <span className='font-Pacifico pb-3 text-lime-500 pt-14 text-center text-4xl md:text-6xl' data-aos="fade-down-right">Great Deal Section</span>
           </div>
-          <div className='w-11/12 flex flex-col justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-left" >
+          <div className='w-11/12 flex flex-col gap-5 md:gap-0 justify-evenly items-center md:flex-row mt-5 mb-2' data-aos="fade-down-left" >
             <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60" Quantity="5kg" RealPrice='₹110' />
             <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30" Quantity="1kg" RealPrice='₹60' />
             <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
             <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
           </div>
-          <div className='w-11/12 flex flex-col md:justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-right" >
+          <div className='w-11/12 flex flex-col gap-5 md:gap-0 md:justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-right" >
             <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60"  Quantity="5kg"/>
             <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60"  Quantity="5kg"/>
             <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30"  Quantity="1kg" />
@@ -175,12 +175,12 @@ function Home() {
           </div> 
           <div className='w-screen relative flex flex-col gap-14  justify-center items-center'>
             
-            <div className='flex gap-10  overflow-auto scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider ' data-aos="flip-up">
+            <div className='flex gap-10  justify-center items-center  flex-col  md:flex-row scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider ' data-aos="flip-up">
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Monkey D.Luffy" Image="https://vignette.wikia.nocookie.net/fairypirates/images/5/5f/Monkey_D._Luffy.png/revision/latest?cb=20161022094701"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>    
               </div>
-            <div className='flex gap-10  pb-16 overflow-auto  scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider' data-aos="flip-up">
+            <div className='flex gap-10  pb-16 justify-center items-center   scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider' data-aos="flip-up">
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Monkey D.Luffy" Image="https://vignette.wikia.nocookie.net/fairypirates/images/5/5f/Monkey_D._Luffy.png/revision/latest?cb=20161022094701"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>    

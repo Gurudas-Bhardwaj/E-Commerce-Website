@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { RouterProvider, createBrowserRouter, Route } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './Components/Home/Home.jsx';
 import ShopLayout from './Components/Shop/ShopLayout.jsx';
 import Layout from './Layout.jsx';
@@ -13,20 +13,19 @@ import DealOfDay from './Components/Shop/DealOfDay.jsx';
 
 const router = createBrowserRouter([
   {
-    path: '',
+    path: '/',
     element: <Layout />,
     children: [
-      { path: '', element: <Home /> },
+      { path: '/', element: <Home /> },
       {
         path: 'Shop',
         element: <ShopLayout />,
         children: [
-          { path: 'Deal', element: <DealOfDay /> },
+          { path: '', element: <DealOfDay /> },
           { path: 'Vegetables', element: <Vegetable /> },
           { path: 'Fruits', element: <Fruits /> },
           { path: 'Juices', element: <Juices /> },
           { path: 'DryFruits', element: <DryFruits /> },
-          
         ],
       },
     ],

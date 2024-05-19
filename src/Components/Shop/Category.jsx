@@ -1,14 +1,17 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Category() {
   return (
     <div>
-      <div className='w-screen h-20 flex justify-center mt-10 font-Popins items-center '>
-        <div className='w-3/5 h-full flex text-2xl justify-center items-center gap-6'>
-        <NavLink
-            to='Deal'
+      <div className='w-screen flex justify-center items-center'>
+        <h1 className='text-lg font-Popins pt-4 text-gray-400  md:invisible'>Scroll For More👉</h1>
+      </div>
+      <div className="w-screen flex justify-center mt-2 font-Popins items-center">
+        <div className="w-full px-4 flex md:justify-center overflow-x-auto whitespace-nowrap text-2xl gap-6">
+          <NavLink
+            to="/Shop"
+            end
             className={({ isActive }) =>
               isActive
                 ? 'p-2 text-white rounded-md bg-lime-500'
@@ -17,8 +20,8 @@ function Category() {
           >
             Deal Of Day
           </NavLink>
-        <NavLink
-            to='Vegetables'
+          <NavLink
+            to="/Shop/Vegetables"
             className={({ isActive }) =>
               isActive
                 ? 'p-2 text-white rounded-md bg-lime-500'
@@ -28,7 +31,7 @@ function Category() {
             Vegetables
           </NavLink>
           <NavLink
-            to='Fruits'
+            to="/Shop/Fruits"
             className={({ isActive }) =>
               isActive
                 ? 'p-2 text-white rounded-md bg-lime-500'
@@ -38,7 +41,7 @@ function Category() {
             Fruits
           </NavLink>
           <NavLink
-            to='Juices'
+            to="/Shop/Juices"
             className={({ isActive }) =>
               isActive
                 ? 'p-2 text-white rounded-md bg-lime-500'
@@ -48,7 +51,7 @@ function Category() {
             Juices
           </NavLink>
           <NavLink
-            to='DryFruits'
+            to="/Shop/DryFruits"
             className={({ isActive }) =>
               isActive
                 ? 'p-2 text-white rounded-md bg-lime-500'
@@ -60,7 +63,7 @@ function Category() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Category
+export default Category;
