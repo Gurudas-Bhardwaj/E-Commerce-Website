@@ -10,34 +10,100 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Vegetable() {
   const notify = () => toast("Succesfully Subcribe");
+  const Details=[
+    {
+      id:1,
+      title:"Potato",
+      Image:Potato,
+      DiscountedPercent:"Combo offer",
+      Price:'₹140',
+      Quantity:"5kg",
+      RealPrice:"₹190"
+    },
+    {
+      id:2,
+      title:"Tomato",
+      Image:Tomato,
+      DiscountedPercent:"Deal of Day",
+      Price:'₹30',
+      Quantity:"1kg",
+      RealPrice:"₹50"
+    },
+    {
+      id:3,
+      title:"Caulifower",
+      Image:Caulifower,
+      DiscountedPercent:"10%",
+      Price:'₹45',
+      Quantity:"1kg",
+      RealPrice:"₹50"
+    },
+    {
+      id:4,
+      title:"Mint",
+      Image:Mint,
+      DiscountedPercent:"22%",
+      Price:'₹10',
+      Quantity:"100gm",
+      RealPrice:"₹14"
+    },
+    {
+      id:4,
+      title:"Mint",
+      Image:Mint,
+      DiscountedPercent:"22%",
+      Price:'₹10',
+      Quantity:"100gm",
+      RealPrice:"₹14"
+    },
+    {
+      id:4,
+      title:"Mint",
+      Image:Mint,
+      DiscountedPercent:"22%",
+      Price:'₹10',
+      Quantity:"100gm",
+      RealPrice:"₹14"
+    },
+    {
+      id:4,
+      title:"Mint",
+      Image:Mint,
+      DiscountedPercent:"22%",
+      Price:'₹10',
+      Quantity:"100gm",
+      RealPrice:"₹14"
+    },
+    {
+      id:4,
+      title:"Mint",
+      Image:Mint,
+      DiscountedPercent:"22%",
+      Price:'₹10',
+      Quantity:"100gm",
+      RealPrice:"₹14"
+    },
+  ]
+
   return (
     <div>
       <div className='flex w-screen flex-col gap-1 md:gap-0  items-center justify-evenly'>
-      <div className='w-11/12 flex gap-5 md:gap-0 flex-col justify-evenly overflow-auto items-center md:flex-row mt-10 mb-5' data-aos="fade-down-right" >
-            <ProductCard Image={Potato} DiscountedPercent='Combo Offer' Title='Potato' Price="₹140" Quantity="5kg" RealPrice='₹190' />
-            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30" Quantity="1kg" RealPrice='₹60' />
-            <ProductCard Image={Caulifower} DiscountedPercent='10%' Title='Caulifower' Price="₹40" RealPrice='₹45' Quantity="1kg" />
-            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹14" RealPrice='₹22' Quantity="200gm" />
-        </div>
-      <div className='w-11/12 flex flex-col gap-5 md:gap-0 justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-left" >
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60" Quantity="1kg" RealPrice='₹70' />
-            <ProductCard Image='https://cdn.pixabay.com/photo/2016/07/11/00/18/carrots-1508847_1280.jpg' DiscountedPercent='13%' Title='Carrot' Price="₹87" Quantity="2kg" RealPrice='₹100' />
-            <ProductCard Image='https://cdn.pixabay.com/photo/2021/08/15/18/50/lady-finger-6548609_960_720.jpg' DiscountedPercent='19%' Title='Lady Finger' Price="₹18" RealPrice='₹22' Quantity="200gm" />
-            <ProductCard Image='https://cdn.pixabay.com/photo/2016/07/05/15/41/cabbage-1498842_1280.jpg' DiscountedPercent='6%' Title='Cabbage' Price="₹38" RealPrice='₹40' Quantity="200gm" />
-        </div>
-      <div className='w-11/12 flex flex-col justify-evenly gap-5 md:gap-0 items-center md:flex-row mt-10 mb-5' data-aos="fade-down-right" >
-            <ProductCard Image={Potato} DiscountedPercent='Combo Offer' Title='Potato' Price="₹140" Quantity="5kg" RealPrice='₹190' />
-            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30" Quantity="1kg" RealPrice='₹60' />
-            <ProductCard Image={Caulifower} DiscountedPercent='10%' Title='Caulifower' Price="₹40" RealPrice='₹45' Quantity="1kg" />
-            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹14" RealPrice='₹22' Quantity="200gm" />
-        </div>
-      <div className='w-11/12 flex flex-col justify-evenly gap-5 md:gap-0 items-center md:flex-row mt-5 mb-5' data-aos="fade-down-left" >
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60" Quantity="1kg" RealPrice='₹70' />
-            <ProductCard Image='https://cdn.pixabay.com/photo/2016/07/11/00/18/carrots-1508847_1280.jpg' DiscountedPercent='13%' Title='Carrot' Price="₹87" Quantity="2kg" RealPrice='₹100' />
-            <ProductCard Image='https://cdn.pixabay.com/photo/2021/08/15/18/50/lady-finger-6548609_960_720.jpg' DiscountedPercent='19%' Title='Lady Finger' Price="₹18" RealPrice='₹22' Quantity="200gm" />
-            <ProductCard Image='https://cdn.pixabay.com/photo/2016/07/05/15/41/cabbage-1498842_1280.jpg' DiscountedPercent='6%' Title='Cabbage' Price="₹38" RealPrice='₹40' Quantity="200gm" />
-        </div>
-      
+      <div className='w-11/12 grid grid-cols-1 md:grid-cols-4 gap-5 place-content-center   overflow-auto  mt-10 mb-5' data-aos="fade-down-right" >
+        {
+          Details.map((details)=>(
+            
+              <ProductCard 
+              key={details.id}
+              Title={details.title}
+              Image={details.Image}
+              Price={details.Price}
+              RealPrice={details.RealPrice}
+              DiscountedPercent={details.DiscountedPercent}
+              Quantity={details.Quantity}
+              />
+          ))}
+      </div>
+            
       </div>
     </div>
   )
