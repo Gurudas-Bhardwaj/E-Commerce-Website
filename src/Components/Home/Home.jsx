@@ -13,6 +13,7 @@ import Mint from '../../Public/Images/Mint.jpg'
 import CustomerSays from '../Card/CustomerSays.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -85,7 +86,7 @@ function Home() {
                 <div className='flex flex-col justify-center items-center w-screen' data-aos="fade-down-right">
                     <span className='font-Pacifico text-3xl  md:text-6xl text-white font-bold text-center'>We Serve Fresh Vegetables & Fruits</span>
                     <span className='text-center font-Popins text-white pt-2 md:pt-10  text-base md:text-2xl'>We Deliver Fresh & Organic Vegetables</span>
-                    <button className='h-12 font-Pacifico text-white text-2xl w-36 bg-green-400 font-semibold mt-8 rounded-3xl'>Shop Now</button>
+                    <Link to='Shop' className='h-12 font-Pacifico text-white flex justify-center items-center text-center text-2xl w-36 bg-green-400 font-semibold mt-8 rounded-3xl'>Shop Now</Link>
                 </div>
             </div>
         </div>
@@ -110,8 +111,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className='flex mt-10 mb-10  justify-center items-center w-screen' data-aos="fade-up">
-        <div className=" flex gap-10 flex-col md:flex-row  items-center" style={{width:"80%"}}>
+      <div className='flex mt-10 mb-10   justify-center items-center w-screen' data-aos="fade-up">
+        <div className=" flex gap-10 flex-col  justify-center md:flex-row  items-center" style={{width:"80%"}}>
           <div className=' w-72 md:w-80 ' >
             <div className='w-full  bg-VegetableImageOne bg-cover bg-center flex items-end' style={{height:"250px"}}>
               <h1 className='font-Popins p-2 text-white bg-lime-500 text-xl'>Vegetable</h1>
@@ -124,7 +125,7 @@ function Home() {
             <div className='w-full  bg-MiddleCard bg-cover bg-center flex flex-col items-center text-center ' style={{height:"530px"}}>
                 <span className='text-3xl font-Pacifico pt-4  font-semibold'>VegeFood</span>
                 <span className='font-Popins text-lg pt-3 '>Protect The Health of Every Home</span>
-                <button className='h-10 w-28 font-Popins font-bold bg-lime-400 border-2 border-black mt-3 rounded-3xl'>Shop Now</button>
+                <Link to='Shop' className='h-10 w-28 flex justify-center items-center text-center font-Popins font-bold bg-lime-400 border-2 border-black mt-3 rounded-3xl'>Shop Now</Link>
             </div>
           </div>
             <div className='  w-72 md:w-80  ' >
@@ -141,7 +142,7 @@ function Home() {
           <div className='p'>
             <h1 className='font-Pacifico text-3xl  md:text-5xl text-lime-500' data-aos='zoom-in'>Shop By Category</h1>
           </div>
-            <div className='flex justify-evenl w-screen scroll-smooth mt-16 overflow-auto gap-10' id='Slider' style={{width:"86%",scrollbarWidth:"none"}} data-aos="flip-down">
+            <div className='flex w-screen scroll-smooth mt-16 overflow-auto gap-10' id='Slider' style={{width:"86%",scrollbarWidth:"none"}} data-aos="flip-down">
               <CategoryCard Background="bg-CardVegetable" Title="Vegetable"/>
               <CategoryCard Background="bg-Fruits" Title="Fruits"/>
               <CategoryCard Background="bg-Almonds" Title="Dry Fruits"/>

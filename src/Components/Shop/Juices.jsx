@@ -12,7 +12,7 @@ function Juices() {
     <div>
       <div className='flex w-screen flex-col md:flex-row justify-evenly'>
       <div className='w-11/12 flex flex-col justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-left" >
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Hello' Price="₹60" Quantity="5kg" RealPrice='₹110' />
+            <ProductCard Image='https://cdn.pixabay.com/photo/2023/04/13/21/14/ai-generated-7923488_1280.jpg' DiscountedPercent='22%' Title='Orange Juice' Price="₹110" Quantity="1 Ltr" RealPrice='₹140' />
             <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30" Quantity="1kg" RealPrice='₹60' />
             <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
             <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
