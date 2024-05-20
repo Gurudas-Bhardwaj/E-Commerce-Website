@@ -10,6 +10,9 @@ import Juices from './Components/Shop/Juices.jsx';
 import Fruits from './Components/Shop/Fruits.jsx';
 import DryFruits from './Components/Shop/DryFruits.jsx';
 import DealOfDay from './Components/Shop/DealOfDay.jsx';
+import Contact from './Components/Contact/Contact.jsx';
+import About from './Components/About Us/About.jsx';
+import Cart from './Components/Cart/Cart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
           { path: 'Juices', element: <Juices /> },
           { path: 'DryFruits', element: <DryFruits /> },
         ],
+      },
+      {
+        path:"Contact-us",
+        element:<Contact/>
+      },
+      {
+        path:"About-us",
+        element:<About/>
+      },
+      {
+        path:"Cart",
+        element:<Cart/>
       },
     ],
   },

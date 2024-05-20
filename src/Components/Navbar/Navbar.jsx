@@ -45,15 +45,15 @@ function Navbar() {
               <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
                 Shop
               </NavLink>
-              <NavLink to="/dsf" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+              <NavLink to="/About-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
                 About Us
               </NavLink>
-              <NavLink to="/p" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+              <NavLink to="/Contact-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
                 Contact Us
               </NavLink>
             </div>
             <div className="flex gap-8" style={{ paddingLeft: "20%" }}>
-              <NavLink className="relative" onClick={handleNavLinkClick}>
+              <NavLink to='Cart' className="relative" onClick={handleNavLinkClick}>
                 <FaBagShopping className="h-9 w-9 text-lime-500" />
                 <span className="absolute z-10 w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>0</span>
               </NavLink>
@@ -74,15 +74,15 @@ function Navbar() {
             <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
               Shop
             </NavLink>
-            <NavLink to="/dsf" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+            <NavLink to="/About-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
               About Us
             </NavLink>
-            <NavLink to="/p" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pb-7`} onClick={handleNavLinkClick}>
+            <NavLink to="/Contact-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pb-7`} onClick={handleNavLinkClick}>
               Contact Us
             </NavLink>
           </div>
           <div className="flex pl-5 gap-6 pb-5">
-            <NavLink className="relative" onClick={handleNavLinkClick}>
+            <NavLink  to='Cart' className="relative" onClick={handleNavLinkClick}>
               <FaBagShopping className="h-9 w-9 text-lime-500" />
               <span className="absolute z-10 w-6 h-6 flex justify-center border border-lime-400 rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>3</span>
             </NavLink>

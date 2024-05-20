@@ -181,7 +181,7 @@ function Home() {
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>    
               </div>
-            <div className='flex gap-10  pb-16 justify-center items-center   scroll-smooth' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider' data-aos="flip-up">
+            <div className='flex gap-10  justify-center items-center  flex-col  md:flex-row scroll-smooth pb-10' style={{width:"78%",scrollbarWidth:"none"}} id='CustomerSlider' data-aos="flip-up">
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Monkey D.Luffy" Image="https://vignette.wikia.nocookie.net/fairypirates/images/5/5f/Monkey_D._Luffy.png/revision/latest?cb=20161022094701"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Yuji Itadori" Image="https://i.pinimg.com/736x/07/17/bc/0717bc375b5d1e10d18bb12bf4b3fb01.jpg"/>  
                 <CustomerSays Stars="⭐⭐⭐⭐⭐" Title="Akira Tendo" Image="https://i.pinimg.com/originals/64/fa/02/64fa02f67a1d8386b85136e5636f5351.jpg"/>    

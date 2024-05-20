@@ -20,6 +20,8 @@ export default {
         Fruits:"url('../src/Public/Images/Fruits.jpg')",
         CardVegetable:"url('../src/Public/Images/CardVegetable.jpg')",
         Juice:"url('../src/Public/Images/Juice.jpg')",
+        Contactbackground:"url('../src/Public/Images/ContactBgc.jpg')",
+        Aboutbackground:"url('../src/Public/Images/AboutBgc.jpg')",
         Almonds:"url('/./src/Public/Images/Almonds.jpg')",
         ShopBackground:"url('../src/Public/Shop/Background.jpg')"
       }
