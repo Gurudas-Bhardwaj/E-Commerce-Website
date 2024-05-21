@@ -37,9 +37,9 @@ function Navbar() {
           <div className="w-4/5 md:w-2/6 flex pl-3 md:pl-0 md:justify-center items-center">
             <h1 className="text-3xl md:text-5xl p-3 text-lime-500 font-bold">VegeFoods</h1>
           </div>
-          <div className="flex w-3/5 Navlink">
+          <div className="flex w-4/5  Navlink">
             <div className="flex gap-16 text-lg pt-1">
-              <NavLink to="" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+              <NavLink to="" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pl-14`} onClick={handleNavLinkClick}>
                 Home
               </NavLink>
               <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
@@ -57,8 +57,8 @@ function Navbar() {
                 <FaBagShopping className="h-9 w-9 text-lime-500" />
                 <span className="absolute z-10 w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>0</span>
               </NavLink>
-              <NavLink onClick={handleNavLinkClick}>
-                <FaRegUserCircle className="h-9 w-9 text-lime-500" />
+              <NavLink to='Profile' onClick={handleNavLinkClick}>
+                <FaRegUserCircle  className="h-9 w-9 text-lime-500" />
               </NavLink>
             </div>
           </div>
@@ -86,7 +86,7 @@ function Navbar() {
               <FaBagShopping className="h-9 w-9 text-lime-500" />
               <span className="absolute z-10 w-6 h-6 flex justify-center border border-lime-400 rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>3</span>
             </NavLink>
-            <NavLink onClick={handleNavLinkClick}>
+            <NavLink to='Profile' onClick={handleNavLinkClick}>
               <FaRegUserCircle className="h-9 w-9 text-lime-500" />
             </NavLink>
           </div>

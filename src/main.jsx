@@ -13,6 +13,9 @@ import DealOfDay from './Components/Shop/DealOfDay.jsx';
 import Contact from './Components/Contact/Contact.jsx';
 import About from './Components/About Us/About.jsx';
 import Cart from './Components/Cart/Cart.jsx';
+import Profile from './Components/Profile/Profile.jsx';
+import Login from './Components/Profile/Login.jsx';
+import CreateAccount from './Components/Profile/CreateAccount.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,18 @@ const router = createBrowserRouter([
       {
         path:"Cart",
         element:<Cart/>
+      },
+      {
+        path:"Profile",
+        element:<Profile/>,
+      },
+      {
+        path:"Login",
+        element:<Login/>
+      },
+      {
+        path:"Create-Account",
+        element:<CreateAccount/>
       },
     ],
   },

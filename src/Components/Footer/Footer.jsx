@@ -25,7 +25,7 @@ function Footer() {
                   <h1 className='font-medium text-xl  '>Menu</h1>
                     <Link className="mt-4" to="/Shop">Shop</Link>
                     <Link>About</Link>
-                    <Link>Journal</Link>
+                    <Link>My Profile</Link>
                     <Link>Contact Us</Link>
                   </div>
               </div>
