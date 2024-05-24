@@ -9,7 +9,7 @@ import CategoryCard from '../Card/CategoryCard.jsx';
 import ProductCard from '../Card/ProductCard'
 import Capsicum from '../../Public/Images/Capsicum.jpg'
 import Tomato from '../../Public/Images/Tomato.jpg'
-import Mint from '../../Public/Images/Mint.jpg'
+import Strawberry from '../../Public/Images/CardStrawberry.jpg'
 import CustomerSays from '../Card/CustomerSays.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -75,6 +75,108 @@ function Home() {
       return () => clearInterval(interval);
     },[])
 
+
+    const Details=[
+      {
+        id:1,
+        limit:10,
+        title:"Blue Berry",
+        Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
+        DiscountedPercent:"Best",
+        Price:'₹60',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },
+      {
+        id:2,
+        limit:14,
+        title:"Capsicum",
+        Image:Capsicum,
+        DiscountedPercent:"New",
+        Price:'₹70',
+        Quantity:"500gm",
+        RealPrice:"₹110"
+      },
+      {
+        id:3,
+        limit:9,
+        title:"Strawberry",
+        Image:Strawberry,
+        DiscountedPercent:"30%",
+        Price:'₹70',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },
+      {
+        id:4,
+        limit:23,
+        title:"Tomato (Hybrid)",
+        Image:Tomato,
+        DiscountedPercent:"Combo offer",
+        Price:'₹60',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },
+      {
+        id:5,
+        limit:34,
+        title:"Blue Berry",
+        Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
+        DiscountedPercent:"Combo offer",
+        Price:'₹60',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },
+      {
+        id:6,
+        limit:11,
+        title:"Blue Berry",
+        Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
+        DiscountedPercent:"Best",
+        Price:'₹60',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },
+      {
+        id:7,
+        limit:10,
+        title:"Capsicum",
+        Image:Capsicum,
+        DiscountedPercent:"New",
+        Price:'₹70',
+        Quantity:"500gm",
+        RealPrice:"₹110"
+      },
+      {
+        id:8,
+        limit:2,
+        title:"Strawberry",
+        Image:Strawberry,
+        DiscountedPercent:"30%",
+        Price:'₹70',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },
+      {
+        id:9,
+        limit:19,
+        title:"Tomato (Hybrid)",
+        Image:Tomato,
+        DiscountedPercent:"Combo offer",
+        Price:'₹60',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },
+      {
+        id:10,
+        limit:11,
+        title:"Blue Berry",
+        Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
+        DiscountedPercent:"Combo offer",
+        Price:'₹60',
+        Quantity:"500gm",
+        RealPrice:"₹100"
+      },]
 
    
 
@@ -146,28 +248,32 @@ function Home() {
               <CategoryCard Background="bg-CardVegetable" Title="Vegetable"/>
               <CategoryCard Background="bg-Fruits" Title="Fruits"/>
               <CategoryCard Background="bg-Almonds" Title="Dry Fruits"/>
-              <CategoryCard Background="bg-Juice" Title="Fruits"/>
+              <CategoryCard Background="bg-Juice" Title="Juices"/>
               <CategoryCard Background="bg-CardVegetable" Title="Vegetable"/>
               <CategoryCard Background="bg-Fruits" Title="Fruits"/>
               <CategoryCard Background="bg-Almonds" Title="Dry Fruits"/>
-              <CategoryCard Background="bg-Juice" Title="Fruits"/>
+              <CategoryCard Background="bg-Juice" Title="Juices"/>
             </div>
         </div>
         <div className='w-screen flex flex-col items-center justify-center'>
           <div className='mt-10 mb-5 w-screen flex flex-col justify-center items-center'>
             <span className='font-Pacifico pb-3 text-lime-500 pt-14 text-center text-4xl md:text-6xl' data-aos="fade-down-right">Great Deal Section</span>
           </div>
-          <div className='w-11/12 flex flex-col gap-5 md:gap-0 justify-evenly items-center md:flex-row mt-5 mb-2' data-aos="fade-down-left" >
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60" Quantity="5kg" RealPrice='₹110' />
-            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30" Quantity="1kg" RealPrice='₹60' />
-            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
-            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
-          </div>
-          <div className='w-11/12 flex flex-col gap-5 md:gap-0 md:justify-evenly items-center md:flex-row mt-5 mb-5' data-aos="fade-down-right" >
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60"  Quantity="5kg"/>
-            <ProductCard Image={Capsicum} DiscountedPercent='22%' Title='Orange Paprika' Price="₹60"  Quantity="5kg"/>
-            <ProductCard Image={Tomato} DiscountedPercent='Deal Of Day' Title='Tomato' Price="₹30"  Quantity="1kg" />
-            <ProductCard Image={Mint} DiscountedPercent='19%' Title='Mint' Price="₹18" RealPrice='₹22' Quantity="200gm" />
+          <div className='w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  place-items-center  gap-5   overflow-auto  mt-10 mb-5' data-aos="fade-down-left" >
+          {
+          Details.map((details)=>(
+            
+              <ProductCard 
+              key={details.id}
+              limit={details.limit}
+              Title={details.title}
+              Image={details.Image}
+              Price={details.Price}
+              RealPrice={details.RealPrice}
+              DiscountedPercent={details.DiscountedPercent}
+              Quantity={details.Quantity}
+              />
+          ))}
           </div>
         </div>
         <div className=' w-screen  flex mt-14 flex-col  items-center'>

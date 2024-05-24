@@ -1,12 +1,16 @@
 import React from 'react';
 import ProductCard from '../Card/ProductCard';
-import Tomato from '../../Public/Images/Tomato.jpg';
 import Mint from '../../Public/Images/Mint.jpg';
+import HerbJuice from '../../Public/Images/CardJuices.jpg'
+import CarrotJuice from '../../Public/Images/Juice.jpg'
+
+
 
 function Juices() {
   const Details = [
     {
       id: '1',
+      limit:5,
       title: 'Orange Juice',
       image: 'https://cdn.pixabay.com/photo/2023/04/13/21/14/ai-generated-7923488_1280.jpg',
       discountedPercent: '22%',
@@ -16,33 +20,37 @@ function Juices() {
     },
     {
       id: '2',
-      title: 'Tomato',
-      image: Tomato,
+      limit:8,
+      title: 'Herb Juice',
+      image: HerbJuice,
       discountedPercent: 'Deal Of Day',
-      price: '₹30',
-      realPrice: '₹60',
-      quantity: '1kg',
+      price: '₹140',
+      realPrice: '₹200',
+      quantity: '1 Ltr',
     },
     {
       id: '3',
-      title: 'Mint',
-      image: Mint,
-      discountedPercent: '19%',
-      price: '₹18',
-      realPrice: '₹22',
-      quantity: '200gm',
+      limit:10,
+      title: 'Carrot Juice',
+      image: CarrotJuice,
+      discountedPercent: '29%',
+      price: '₹108',
+      realPrice: '₹142',
+      quantity: '1 Ltr',
     },
     {
       id: '4',
-      title: 'Mint',
-      image: Mint,
-      discountedPercent: '19%',
-      price: '₹18',
-      realPrice: '₹22',
-      quantity: '200gm',
+      limit:6,
+      title: 'Lime Juice',
+      image: 'https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_1280.jpg',
+      discountedPercent: '25%',
+      price: '₹110',
+      realPrice: '₹142',
+      quantity: '1 Ltr',
     },
     {
       id: '5',
+      limit:10,
       title: 'Mint',
       image: Mint,
       discountedPercent: '19%',
@@ -52,6 +60,7 @@ function Juices() {
     },
     {
       id: '6',
+      limit:10,
       title: 'Mint',
       image: Mint,
       discountedPercent: '19%',
@@ -63,10 +72,11 @@ function Juices() {
 
   return (
     <div className="flex justify-center">
-      <div className="w-11/12 grid grid-cols-1 md:grid-cols-4 gap-4 mt-5 mb-5" data-aos="fade-down-left">
+      <div className="w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  place-items-center  gap-5   overflow-auto  mt-10 mb-5" >
         {Details.map((detail) => (
           <ProductCard 
             key={detail.id}
+            limit={detail.limit}
             Title={detail.title}
             Image={detail.image}
             DiscountedPercent={detail.discountedPercent}

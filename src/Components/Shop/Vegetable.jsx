@@ -1,18 +1,15 @@
 import React from 'react'
 import ProductCard from '../Card/ProductCard'
-import Capsicum from '../../Public/Images/Capsicum.jpg'
 import Tomato from '../../Public/Images/Tomato.jpg'
 import Mint from '../../Public/Images/Mint.jpg'
 import Potato from '../../Public/Shop/Potato.jpg'
 import Caulifower from '../../Public/Shop/Caulifower.jpg'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function Vegetable() {
-  const notify = () => toast("Succesfully Subcribe");
   const Details=[
     {
       id:1,
+      limit:5,
       title:"Potato",
       Image:Potato,
       DiscountedPercent:"Combo offer",
@@ -22,6 +19,7 @@ function Vegetable() {
     },
     {
       id:2,
+      limit:10,
       title:"Tomato",
       Image:Tomato,
       DiscountedPercent:"Deal of Day",
@@ -31,6 +29,7 @@ function Vegetable() {
     },
     {
       id:3,
+      limit:8,
       title:"Caulifower",
       Image:Caulifower,
       DiscountedPercent:"10%",
@@ -40,6 +39,7 @@ function Vegetable() {
     },
     {
       id:4,
+      limit:50,
       title:"Mint",
       Image:Mint,
       DiscountedPercent:"22%",
@@ -48,7 +48,8 @@ function Vegetable() {
       RealPrice:"₹14"
     },
     {
-      id:4,
+      id:5,
+      limit:50,
       title:"Mint",
       Image:Mint,
       DiscountedPercent:"22%",
@@ -57,7 +58,8 @@ function Vegetable() {
       RealPrice:"₹14"
     },
     {
-      id:4,
+      id:6,
+      limit:50,
       title:"Mint",
       Image:Mint,
       DiscountedPercent:"22%",
@@ -66,7 +68,8 @@ function Vegetable() {
       RealPrice:"₹14"
     },
     {
-      id:4,
+      id:7,
+      limit:50,
       title:"Mint",
       Image:Mint,
       DiscountedPercent:"22%",
@@ -75,7 +78,8 @@ function Vegetable() {
       RealPrice:"₹14"
     },
     {
-      id:4,
+      id:8,
+      limit:50,
       title:"Mint",
       Image:Mint,
       DiscountedPercent:"22%",
@@ -87,13 +91,14 @@ function Vegetable() {
 
   return (
     <div>
-      <div className='flex w-screen flex-col gap-1 md:gap-0  items-center justify-evenly'>
-      <div className='w-11/12 grid grid-cols-1 md:grid-cols-4 gap-5 place-content-center   overflow-auto  mt-10 mb-5' data-aos="fade-down-right" >
+      <div className='flex w-screen  gap-1 md:gap-0  items-center justify-evenly'>
+      <div className='w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  place-items-center  gap-5   overflow-auto  mt-10 mb-5'  >
         {
           Details.map((details)=>(
             
               <ProductCard 
               key={details.id}
+              limit={details.limit}
               Title={details.title}
               Image={details.Image}
               Price={details.Price}

@@ -40,7 +40,7 @@ function Contact() {
                 </div>
                 <div className='h-40  font-Popins  w-64 bg-lime-500' data-aos="fade-down-right">
                     <h1 className='pt-7 pl-4 text-white text-lg'>Created By :
-                    <a href="https://github.com/dashboard" target='_blank' className='pl-2 text-stone-900 underline'>Gurudas</a>
+                    <a href="https://github.com/Gurudas-Bhardwaj" target='_blank' className='pl-2 text-stone-900 underline'>Gurudas</a>
                     </h1>
                 </div>
             </div>

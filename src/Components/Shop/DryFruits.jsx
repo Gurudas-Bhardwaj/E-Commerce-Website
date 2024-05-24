@@ -1,8 +1,5 @@
 import React from 'react'
 import ProductCard from '../Card/ProductCard'
-import Capsicum from '../../Public/Images/Capsicum.jpg'
-import Tomato from '../../Public/Images/Tomato.jpg'
-import Mint from '../../Public/Images/Mint.jpg'
 import Almonds from '../../Public/Images/Almonds.jpg'
 
 
@@ -13,6 +10,7 @@ function DryFruits() {
   const Details=[
     {
       id:1,
+      limit:5,
       Title:"Pistachio",
       DiscountedPercent:'20%',
       Price:'₹400',
@@ -22,6 +20,7 @@ function DryFruits() {
     },
     {
       id:2,
+      limit:7,
       Title:"Almonds",
       DiscountedPercent:'12%',
       Price:'₹450',
@@ -31,6 +30,7 @@ function DryFruits() {
     },
     {
       id:3,
+      limit:10,
       Title:"Cashew",
       DiscountedPercent:'9%',
       Price:'₹350',
@@ -40,6 +40,7 @@ function DryFruits() {
     },
     {
       id:4,
+      limit:4,
       Title:"Walnut",
       DiscountedPercent:'22%',
       Price:'₹550',
@@ -48,7 +49,8 @@ function DryFruits() {
       Image:"https://cdn.pixabay.com/photo/2023/10/15/13/59/walnuts-8316999_1280.jpg",
     },
     {
-      id:1,
+      id:5,
+      limit:6,
       Title:"Pistachio",
       DiscountedPercent:'20%',
       Price:'₹400',
@@ -57,7 +59,8 @@ function DryFruits() {
       Image:"https://cdn.pixabay.com/photo/2022/11/06/14/40/pistachio-7574180_960_720.jpg",
     },
     {
-      id:2,
+      id:6,
+      limit:7,
       Title:"Almonds",
       DiscountedPercent:'12%',
       Price:'₹450',
@@ -66,7 +69,8 @@ function DryFruits() {
       Image:Almonds,
     },
     {
-      id:3,
+      id:7,
+      limit:10,
       Title:"Cashew",
       DiscountedPercent:'9%',
       Price:'₹350',
@@ -75,7 +79,8 @@ function DryFruits() {
       Image:"https://cdn.pixabay.com/photo/2015/10/01/20/23/cashew-nuts-967650_960_720.jpg",
     },
     {
-      id:4,
+      id:8,
+      limit:4,
       Title:"Walnut",
       DiscountedPercent:'22%',
       Price:'₹550',
@@ -89,10 +94,12 @@ function DryFruits() {
   return (
     <div>
       <div className='flex w-screen flex-col md:flex-row justify-evenly'>
-      <div className='w-11/12 grid grid-cols-1 gap-5 place-content-center items-center  md:grid-cols-4 mt-5 md:ml-4  mb-5'  >
+      <div className='w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  place-items-center  gap-5   overflow-auto  mt-10 mb-5'  >
               {
                 Details.map((Details)=>(
                   <ProductCard
+                    key={Details.id}
+                    limit={Details.limit}
                     Title={Details.Title}
                     Quantity={Details.Quantity}
                     RealPrice={Details.RealPrice}
