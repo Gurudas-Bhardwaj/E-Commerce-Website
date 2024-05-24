@@ -51,7 +51,7 @@ function Contact() {
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d875.4596310371534!2d77.28068815566459!3d28.634601303604555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcabf0c543c3%3A0xbe4f2a03f12f5640!2sC%2C%20C%2B%2B%2C%20Java%2C%20Python%2C%20DSA%2C%20Data%20Science%2C%20AI%2C%20ML%2C%20Full%20Stack%2C%20PHP%2C%20Coding%20Programming%20Courses%20in%20Laxminagar%20%7C%20Vcare%20Institute!5e0!3m2!1sen!2sin!4v1716202284848!5m2!1sen!2sin" className='w-full h-full'></iframe>
             </div>
             <div  className='font-Popins  flex items-center  justify-center' style={{height:"480px"}} >
-                <form action="#" className='flex flex-col gap-5'>
+                <form action="" className='flex flex-col gap-5'>
                     <input type="text" placeholder='Your Name'  className='h-12 w-80 sm:w-96 border border-black text-gray-700 p-2'/>
                     <input type="text" placeholder='Your Email'  className='h-12 w-80 sm:w-96 border border-black text-gray-700 p-2'/>
                     <input type="text" placeholder='Your Subject'  className='h-12 w-80 sm:w-96 border border-black text-gray-700 p-2'/>
