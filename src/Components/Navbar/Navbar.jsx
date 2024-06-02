@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { TfiMenu } from "react-icons/tfi";
-import { FaBagShopping } from "react-icons/fa6";
+import { TfiMenu } from 'react-icons/tfi';
+import { FaBagShopping } from 'react-icons/fa6';
 import '../Navbar/Style.css';
 import { Context } from '../../Context/Context';
 import { NavLink } from 'react-router-dom';
-import { FaRegUserCircle } from "react-icons/fa";
+import { FaRegUserCircle } from 'react-icons/fa';
+import {  useSelector } from 'react-redux';
 
 function Navbar() {
+  const count = useSelector((state) => state.CartNumber.value); // Access the value property
+
   const windowScroll = useContext(Context);
   const [toggle, setToggle] = useState('minimize');
 
@@ -17,48 +20,67 @@ function Navbar() {
   const handleNavLinkClick = () => {
     setToggle('minimize');
   };
-  
-  const [Position,setPosition]=useState("sticky")
 
-  useEffect(()=>{
-    if(windowScroll>=400){
-      setPosition("fixed")
-    }else if(windowScroll<500){
-      setPosition("sticky")
+  const [position, setPosition] = useState('sticky');
 
+  useEffect(() => {
+    if (windowScroll >= 400) {
+      setPosition('fixed');
+    } else if (windowScroll < 500) {
+      setPosition('sticky');
     }
-  },[windowScroll])
-
+  }, [windowScroll]);
 
   return (
     <>
-      <header className={`  ${Position} z-50`}>
-        <div className={`*:font-Popins w-screen h-24 bg-black flex items-center`}>
+      <header className={`${position} z-50`}>
+        <div className="*:font-Popins w-screen h-24 bg-black flex items-center">
           <div className="w-4/5 md:w-2/6 flex pl-3 md:pl-0 md:justify-center items-center">
             <h1 className="text-3xl md:text-5xl p-3 text-lime-500 font-bold">VegeFoods</h1>
           </div>
-          <div className="flex w-4/5  Navlink">
+          <div className="flex w-4/5 Navlink">
             <div className="flex gap-16 text-lg pt-1">
-              <NavLink to="" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pl-14`} onClick={handleNavLinkClick}>
+              <NavLink
+                to=""
+                className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'} pl-14`}
+                onClick={handleNavLinkClick}
+              >
                 Home
               </NavLink>
-              <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+              <NavLink
+                to="/Shop"
+                className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'}`}
+                onClick={handleNavLinkClick}
+              >
                 Shop
               </NavLink>
-              <NavLink to="/About-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+              <NavLink
+                to="/About-us"
+                className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'}`}
+                onClick={handleNavLinkClick}
+              >
                 About Us
               </NavLink>
-              <NavLink to="/Contact-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+              <NavLink
+                to="/Contact-us"
+                className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'}`}
+                onClick={handleNavLinkClick}
+              >
                 Contact Us
               </NavLink>
             </div>
-            <div className="flex gap-8" style={{ paddingLeft: "20%" }}>
-              <NavLink to='Cart' className="relative" onClick={handleNavLinkClick}>
+            <div className="flex gap-8" style={{ paddingLeft: '20%' }}>
+              <NavLink to="Cart" className="relative" onClick={handleNavLinkClick}>
                 <FaBagShopping className="h-9 w-9 text-lime-500" />
-                <span className="absolute z-10 w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>0</span>
+                <span
+                  className="absolute z-10 w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white"
+                  style={{ right: '-25%', top: '-26%' }}
+                >
+                  {count}
+                </span>
               </NavLink>
-              <NavLink to='Profile' onClick={handleNavLinkClick}>
-                <FaRegUserCircle  className="h-9 w-9 text-lime-500" />
+              <NavLink to="Profile" onClick={handleNavLinkClick}>
+                <FaRegUserCircle className="h-9 w-9 text-lime-500" />
               </NavLink>
             </div>
           </div>
@@ -66,27 +88,48 @@ function Navbar() {
             <TfiMenu className="h-7 w-7 md:ml-96 md:h-10 text-lime-500 font-bold md:w-10" />
           </div>
         </div>
-        <div className={`w-screen transition-all bg-black duration-300 ease-in-out  ${toggle}`}>
-          <div className="flex flex-col text-lg pl-6  gap-2">
-            <NavLink to="" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pt-5`} onClick={handleNavLinkClick}>
+        <div className={`w-screen transition-all bg-black duration-300 ease-in-out ${toggle}`}>
+          <div className="flex flex-col text-lg pl-6 gap-2">
+            <NavLink
+              to=""
+              className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'} pt-5`}
+              onClick={handleNavLinkClick}
+            >
               Home
             </NavLink>
-            <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+            <NavLink
+              to="/Shop"
+              className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'}`}
+              onClick={handleNavLinkClick}
+            >
               Shop
             </NavLink>
-            <NavLink to="/About-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"}`} onClick={handleNavLinkClick}>
+            <NavLink
+              to="/About-us"
+              className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'}`}
+              onClick={handleNavLinkClick}
+            >
               About Us
             </NavLink>
-            <NavLink to="/Contact-us" className={({ isActive }) => `${isActive ? "text-lime-400" : "text-white"} pb-7`} onClick={handleNavLinkClick}>
+            <NavLink
+              to="/Contact-us"
+              className={({ isActive }) => `${isActive ? 'text-lime-400' : 'text-white'} pb-7`}
+              onClick={handleNavLinkClick}
+            >
               Contact Us
             </NavLink>
           </div>
           <div className="flex pl-5 gap-6 pb-5">
-            <NavLink  to='Cart' className="relative" onClick={handleNavLinkClick}>
+            <NavLink to="Cart" className="relative" onClick={handleNavLinkClick}>
               <FaBagShopping className="h-9 w-9 text-lime-500" />
-              <span className="absolute z-10 w-6 h-6 flex justify-center border border-lime-400 rounded-full bg-lime-500 text-white" style={{ right: "-25%", top: "-26%" }}>3</span>
+              <span
+                className="absolute z-10 w-6 h-6 flex justify-center border border-lime-400 rounded-full bg-lime-500 text-white"
+                style={{ right: '-25%', top: '-26%' }}
+              >
+                {count}
+              </span>
             </NavLink>
-            <NavLink to='Profile' onClick={handleNavLinkClick}>
+            <NavLink to="Profile" onClick={handleNavLinkClick}>
               <FaRegUserCircle className="h-9 w-9 text-lime-500" />
             </NavLink>
           </div>

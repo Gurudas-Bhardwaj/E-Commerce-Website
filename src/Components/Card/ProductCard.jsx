@@ -1,25 +1,34 @@
 import React, { useState } from 'react'
 import { FaCartArrowDown } from "react-icons/fa";
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment } from '../../Redux/Features/CartNumber';
+import { add } from '../../Redux/Features/AddToCart';
 
 export default function Card(props) {
+  const Count=useSelector(state=>state.CartNumber.value)
+  const Dispatch=useDispatch()
   const [Number, setNumber] = useState(0);
   const [Cart,setCart]=useState(true)
 
   const handleAddToCart = () => {
     setNumber(Number+1)
     setCart(false)
+    Dispatch(increment())
+    Dispatch(add([props.id,props.Title,props.Image,props.Price,props.Quantity]))
   };
+  
   const ChangeToCart = () => {
     if(Number<=1){
       setCart(true)
       setNumber(0)
+      Dispatch(decrement())
     }else{
       setNumber(Number-1)
     }
   };
   const AddToCart = () => {
     if(Number<props.limit)
-    setNumber(Number+1)
+    setNumber(Number+1) 
   };
 
   
@@ -44,7 +53,7 @@ export default function Card(props) {
             <h1 className='pl-3 font-sans flex text-lg font-bold pt-'>{props.Price} <span className='text-base pt-1 pl-2 line-through  font-normal'>{props.RealPrice}</span> </h1>
             <div className='relative w-full flex justify-center items-center pt-4 pb-5'>
             {Cart && (
-              <div className='p-2 absolute w-24  bg-lime-700 cursor-pointer border-2 border-lime-700 ml-2 mr-2 text-white rounded-2xl flex justify-center items-center gap-1' onClick={handleAddToCart} ><FaCartArrowDown className='' />Add</div>
+              <div className='p-2 absolute w-24  bg-lime-700 cursor-pointer border-2 border-lime-700 ml-2 mr-2 text-white rounded-2xl flex justify-center items-center gap-1' onClick={handleAddToCart}  ><FaCartArrowDown className='' />Add</div>
             )}
             {!Cart && (
               <div className='p-2 absolute  w-24  bg-lime-700 cursor-pointer border-2 border-lime-700 ml-2 mr-2 text-white rounded-2xl flex justify-center items-center gap-1'  ><span className='pr-3 pl-2' onClick={ChangeToCart}>-</span> {Number} <span onClick={AddToCart} className='pl-2 pr-2'>+</span></div>

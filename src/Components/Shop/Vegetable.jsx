@@ -98,6 +98,7 @@ function Vegetable() {
             
               <ProductCard 
               key={details.id}
+              id={details.id}
               limit={details.limit}
               Title={details.title}
               Image={details.Image}

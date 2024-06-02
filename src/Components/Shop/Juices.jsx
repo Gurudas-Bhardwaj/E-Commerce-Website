@@ -76,6 +76,7 @@ function Juices() {
         {Details.map((detail) => (
           <ProductCard 
             key={detail.id}
+            id={detail.id}
             limit={detail.limit}
             Title={detail.title}
             Image={detail.image}

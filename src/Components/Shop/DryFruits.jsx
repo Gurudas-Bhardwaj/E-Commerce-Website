@@ -99,6 +99,7 @@ function DryFruits() {
                 Details.map((Details)=>(
                   <ProductCard
                     key={Details.id}
+                    id={Details.id}
                     limit={Details.limit}
                     Title={Details.Title}
                     Quantity={Details.Quantity}

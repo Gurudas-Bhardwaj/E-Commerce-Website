@@ -1,13 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Empty from '../../Public/Images/EmptyCart.png'
 import { Link } from 'react-router-dom';
 import ShoppingCart from './ShoppingCart';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Cart() {
-    const [EmptyCart,SetEmptyCart]=useState(true);
+    const [EmptyCart,SetEmptyCart]=useState(false);
+
+    useEffect(() => {
+      AOS.init({
+        once: true,
+        enable: "phone",
+        duration: 600,
+        easing: "ease-out-cubic",
+      });
+    }, []);
 
   return (
-    <div>
+    <div data-aos="zoom-out-down">
       {EmptyCart &&(
       <div className=' w-screen flex font-Popins flex-col justify-center items-center'>
         <div>
@@ -26,12 +37,8 @@ function Cart() {
       )}
       {!EmptyCart && (
         <div>
-          <div className='w-screen mt-10 flex justify-center items-center'>
-            <h1 className='font-Popins  text-3xl md:text-5xl font-bold text-center '>Shopping Cart</h1>
-          </div>
-          <div className='w-screen mt-10 flex flex-col justify-center items-center'>
-            <ShoppingCart/>
-          </div>
+          <ShoppingCart/>
+          
         </div>
       )}
     </div>

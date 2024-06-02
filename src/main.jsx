@@ -16,6 +16,8 @@ import Cart from './Components/Cart/Cart.jsx';
 import Profile from './Components/Profile/Profile.jsx';
 import Login from './Components/Profile/Login.jsx';
 import CreateAccount from './Components/Profile/CreateAccount.jsx';
+import { Provider } from 'react-redux';
+import store  from './Redux/Store/Store.js';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +66,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
