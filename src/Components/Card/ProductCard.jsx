@@ -14,6 +14,23 @@ export default function Card(props) {
   let Product=[]
 
 
+  useEffect(() => {
+    const storedCart = localStorage.getItem(`cart_${props.id}`);
+    const storedNumber = localStorage.getItem(`number_${props.id}`);
+
+    if (storedCart !== null) {
+      setCart(JSON.parse(storedCart));
+    }
+
+    if (storedNumber !== null) {
+      setNumber(JSON.parse(storedNumber));
+    }
+    
+    
+    
+  }, [props.id]);
+
+
   const handleAddToCart = () => {
 
     const newNumber = Number + 1;
@@ -24,6 +41,10 @@ export default function Card(props) {
     setCart(false);
 
     Dispatch(increment());
+
+    
+    localStorage.setItem(`cart_${props.id}`, JSON.stringify(false));
+    localStorage.setItem(`number_${props.id}`, JSON.stringify(newNumber));
 
     Product={
       key:props.id,
@@ -53,10 +74,14 @@ export default function Card(props) {
 
       Dispatch(decrement());
 
+      localStorage.setItem(`cart_${props.id}`, JSON.stringify(true));
+      localStorage.setItem(`number_${props.id}`, JSON.stringify(0));
+
     }
     else {
       const newNumber = Number - 1;
       setNumber(newNumber); 
+      localStorage.setItem(`number_${props.id}`, JSON.stringify(newNumber));
     }
 
   };

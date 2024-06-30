@@ -35,9 +35,9 @@ const ShoppingCartCard = (props) => {
             </div>
             <div className=' flex ml-0'>
               <div className='ml-0 mt-1 flex items-center justify-evenly w-32'>
-                <button className='w-8 h-8 rounded-full bg-lime-400' onClick={incr()}>+</button>
+                <button className='w-8 h-8 rounded-full bg-lime-400' onClick={incr}>+</button>
                 <span className='text-lg'>{cartNumber}</span>
-                <button className='w-8 h-8 rounded-full bg-lime-400' onClick={dicr()}>-</button>
+                <button className='w-8 h-8 rounded-full bg-lime-400' onClick={dicr}>-</button>
               </div>
               <button className='h-10 w-28 ml-2 rounded-2xl  text-white text-lg bg-lime-500' onClick={handleRemove()}>Remove</button>
             </div>
