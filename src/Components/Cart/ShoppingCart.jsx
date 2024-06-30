@@ -10,10 +10,10 @@ function ShoppingCart() {
     <div className='w-screen flex flex-col justify-center items-center  bg-stone-100'>
         <div className='w-5/6 sm:w-5/6 md:w-4/5 lg:w-3/5    flex mt-5 mb-5 flex-col gap-4'>
         {
-          CartArray.map(product=>(
+          CartArray.map((product)=>(
 
             <ShoppingCartCard
-              key={product.key}
+              key={product.id}
               id={product.id}
               Title={product.title}
               Quantity={product.quantity}

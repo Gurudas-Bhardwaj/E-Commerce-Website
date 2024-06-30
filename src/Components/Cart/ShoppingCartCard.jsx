@@ -14,7 +14,8 @@ const ShoppingCartCard = (props) => {
     dispatch(decrement())
   }
   let handleRemove=()=>{
-    dispatch(remove())
+    // console.log(props.id);
+    dispatch(remove(props.id))
   }
 
 
@@ -39,7 +40,7 @@ const ShoppingCartCard = (props) => {
                 <span className='text-lg'>{cartNumber}</span>
                 <button className='w-8 h-8 rounded-full bg-lime-400' onClick={dicr}>-</button>
               </div>
-              <button className='h-10 w-28 ml-2 rounded-2xl  text-white text-lg bg-lime-500' onClick={handleRemove()}>Remove</button>
+              <button className='h-10 w-28 ml-2 rounded-2xl  text-white text-lg bg-lime-500' onClick={handleRemove}>Remove</button>
             </div>
           </div>
           <div className='mt-8 text-center flex flex-col'>

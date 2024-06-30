@@ -11,7 +11,7 @@ export default function Card(props) {
   const [Number, setNumber] = useState(0);
   const [Cart, setCart] = useState(true);
 
-  let Product=[]
+    let Product=[]
 
 
   useEffect(() => {
@@ -54,7 +54,6 @@ export default function Card(props) {
       quantity: props.Quantity,
       price: props.Price,
     };
-    console.log(Product);
 
     Dispatch(add(Product));
 

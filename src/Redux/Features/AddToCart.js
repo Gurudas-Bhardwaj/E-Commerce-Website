@@ -6,12 +6,12 @@ export const AddToCart = createSlice({
     myArray: []
   },
   reducers: {
-    add(state, action) {
-        state.myArray.push(action.payload);
+    add(state, hello) {
+        state.myArray.push(hello.payload);
     },
     remove(state, action) {
-        
-    }
+      return state.myArray.filter((item) => item.id != action.payload);
+  },
   },
 });
 
