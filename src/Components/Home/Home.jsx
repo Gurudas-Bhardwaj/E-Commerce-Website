@@ -79,6 +79,7 @@ function Home() {
     const Details=[
       {
         id:1,
+        Uniqueid:'DD1',
         limit:10,
         title:"Blue Berry",
         Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -89,6 +90,7 @@ function Home() {
       },
       {
         id:2,
+        Uniqueid:'DD2',
         limit:14,
         title:"Capsicum",
         Image:Capsicum,
@@ -99,6 +101,7 @@ function Home() {
       },
       {
         id:3,
+        Uniqueid:'DD3',
         limit:9,
         title:"Strawberry",
         Image:Strawberry,
@@ -109,6 +112,7 @@ function Home() {
       },
       {
         id:4,
+        Uniqueid:'DD4',
         limit:23,
         title:"Tomato (Hybrid)",
         Image:Tomato,
@@ -119,6 +123,7 @@ function Home() {
       },
       {
         id:5,
+        Uniqueid:'DD5',
         limit:34,
         title:"Blue Berry",
         Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -129,6 +134,7 @@ function Home() {
       },
       {
         id:6,
+        Uniqueid:'DD6',
         limit:11,
         title:"Blue Berry",
         Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -139,6 +145,7 @@ function Home() {
       },
       {
         id:7,
+        Uniqueid:'DD7',
         limit:10,
         title:"Capsicum",
         Image:Capsicum,
@@ -149,6 +156,7 @@ function Home() {
       },
       {
         id:8,
+        Uniqueid:'DD8',
         limit:2,
         title:"Strawberry",
         Image:Strawberry,
@@ -159,6 +167,7 @@ function Home() {
       },
       {
         id:9,
+        Uniqueid:'DD9',
         limit:19,
         title:"Tomato (Hybrid)",
         Image:Tomato,
@@ -169,6 +178,7 @@ function Home() {
       },
       {
         id:10,
+        Uniqueid:'DD10',
         limit:11,
         title:"Blue Berry",
         Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -177,8 +187,8 @@ function Home() {
         Quantity:"500gm",
         RealPrice:"₹100"
       },]
-
-   
+      
+      
 
   return (
     <div>
@@ -259,13 +269,13 @@ function Home() {
           <div className='mt-10 mb-5 w-screen flex flex-col justify-center items-center'>
             <span className='font-Pacifico pb-3 text-lime-500 pt-14 text-center text-4xl md:text-6xl' data-aos="fade-down-right">Great Deal Section</span>
           </div>
-          <div className='w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  place-items-center  gap-5   overflow-auto  mt-10 mb-5' data-aos="fade-down-left" >
+          <div className='w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  place-items-center gap-5 mt-10 mb-5' data-aos="fade-down-left" >
           {
           Details.map((details)=>(
             
               <ProductCard 
               key={details.id}
-              id={details.id}
+              id={details.Uniqueid}
               limit={details.limit}
               Title={details.title}
               Image={details.Image}

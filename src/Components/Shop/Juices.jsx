@@ -10,6 +10,7 @@ function Juices() {
   const Details = [
     {
       id: '1',
+      Uniqueid:'J1',
       limit:5,
       title: 'Orange Juice',
       image: 'https://cdn.pixabay.com/photo/2023/04/13/21/14/ai-generated-7923488_1280.jpg',
@@ -20,6 +21,7 @@ function Juices() {
     },
     {
       id: '2',
+      Uniqueid:'J2',
       limit:8,
       title: 'Herb Juice',
       image: HerbJuice,
@@ -30,6 +32,7 @@ function Juices() {
     },
     {
       id: '3',
+      Uniqueid:'J3',
       limit:10,
       title: 'Carrot Juice',
       image: CarrotJuice,
@@ -40,6 +43,7 @@ function Juices() {
     },
     {
       id: '4',
+      Uniqueid:'J4',
       limit:6,
       title: 'Lime Juice',
       image: 'https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_1280.jpg',
@@ -50,6 +54,7 @@ function Juices() {
     },
     {
       id: '5',
+      Uniqueid:'J5',
       limit:10,
       title: 'Mint',
       image: Mint,
@@ -60,6 +65,7 @@ function Juices() {
     },
     {
       id: '6',
+      Uniqueid:'J6',
       limit:10,
       title: 'Mint',
       image: Mint,
@@ -69,14 +75,15 @@ function Juices() {
       quantity: '200gm',
     },
   ];
-
+  
+  
   return (
     <div className="flex justify-center">
       <div className="w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  place-items-center  gap-5   overflow-auto  mt-10 mb-5" >
         {Details.map((detail) => (
           <ProductCard 
             key={detail.id}
-            id={detail.id}
+            id={detail.Uniqueid}
             limit={detail.limit}
             Title={detail.title}
             Image={detail.image}

@@ -9,6 +9,7 @@ function Juices() {
   const Details=[
     {
       id:1,
+      Uniqueid:'J1',
       limit:10,
       title:"Blue Berry",
       Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -19,6 +20,7 @@ function Juices() {
     },
     {
       id:2,
+      Uniqueid:'J2',
       limit:14,
       title:"Capsicum",
       Image:Capsicum,
@@ -29,6 +31,7 @@ function Juices() {
     },
     {
       id:3,
+      Uniqueid:'J3',
       limit:9,
       title:"Strawberry",
       Image:Strawberry,
@@ -39,6 +42,7 @@ function Juices() {
     },
     {
       id:4,
+      Uniqueid:'J4',
       limit:23,
       title:"Tomato (Hybrid)",
       Image:Tomato,
@@ -49,6 +53,7 @@ function Juices() {
     },
     {
       id:5,
+      Uniqueid:'J5',
       limit:34,
       title:"Blue Berry",
       Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -59,6 +64,7 @@ function Juices() {
     },
     {
       id:6,
+      Uniqueid:'J6',
       limit:11,
       title:"Blue Berry",
       Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -70,6 +76,7 @@ function Juices() {
     {
       id:7,
       limit:10,
+      Uniqueid:'J7',
       title:"Capsicum",
       Image:Capsicum,
       DiscountedPercent:"New",
@@ -79,6 +86,7 @@ function Juices() {
     },
     {
       id:8,
+      Uniqueid:'J8',
       limit:2,
       title:"Strawberry",
       Image:Strawberry,
@@ -89,6 +97,7 @@ function Juices() {
     },
     {
       id:9,
+      Uniqueid:'J9',
       limit:19,
       title:"Tomato (Hybrid)",
       Image:Tomato,
@@ -99,6 +108,7 @@ function Juices() {
     },
     {
       id:10,
+      Uniqueid:'J10',
       limit:11,
       title:"Blue Berry",
       Image:'https://cdn.pixabay.com/photo/2018/06/14/13/20/blueberries-3474854_1280.jpg',
@@ -117,7 +127,7 @@ function Juices() {
             
               <ProductCard 
               key={details.id}
-              id={details.id}
+              id={details.Uniqueid}
               limit={details.limit}
               Title={details.title}
               Image={details.Image}

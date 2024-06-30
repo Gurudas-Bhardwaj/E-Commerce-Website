@@ -1,12 +1,16 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect, useContext } from 'react'
 import Empty from '../../Public/Images/EmptyCart.png'
 import { Link } from 'react-router-dom';
 import ShoppingCart from './ShoppingCart';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useSelector } from 'react-redux';
 
 function Cart() {
-    const [EmptyCart,SetEmptyCart]=useState(false);
+    // const [EmptyCart,SetEmptyCart]=useState(false);
+    const EmptyCart=useSelector((state)=>state.CartToggle.value)
+     
+    
 
     useEffect(() => {
       AOS.init({

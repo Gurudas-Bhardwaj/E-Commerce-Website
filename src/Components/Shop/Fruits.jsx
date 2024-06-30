@@ -6,6 +6,7 @@ function Fruits() {
   const Details = [
     {
       id: 1,
+      Uniqueid:'F1',
       limit:12,
       title: "Oranges",
       Image: 'https://cdn.pixabay.com/photo/2023/12/08/10/56/mandarins-8437425_1280.jpg',
@@ -16,6 +17,7 @@ function Fruits() {
     },
     {
       id: 2,
+      Uniqueid:'F2',
       limit:5,
       title: "Banana",
       Image: 'https://cdn.pixabay.com/photo/2018/09/24/20/12/bananas-3700718_1280.jpg',
@@ -26,6 +28,7 @@ function Fruits() {
     },
     {
       id: 3,
+      Uniqueid:'F3',
       limit:8,
       title: "Watermelon",
       Image: 'https://cdn.pixabay.com/photo/2016/11/21/15/46/watermelon-1846051_960_720.jpg',
@@ -36,6 +39,7 @@ function Fruits() {
     },
     {
       id: 4,
+      Uniqueid:'F4',
       limit:15,
       title: "Alphanso Mango",
       Image: 'https://cdn.pixabay.com/photo/2016/04/10/15/13/mangoes-1320111_1280.jpg',
@@ -46,6 +50,7 @@ function Fruits() {
     },
     {
       id: 5,
+      Uniqueid:'F5',
       limit:12,
       title: "Oranges",
       Image: 'https://cdn.pixabay.com/photo/2023/12/08/10/56/mandarins-8437425_1280.jpg',
@@ -56,6 +61,7 @@ function Fruits() {
     },
     {
       id: 6,
+      Uniqueid:'F6',
       limit:5,
       title: "Banana",
       Image: 'https://cdn.pixabay.com/photo/2018/09/24/20/12/bananas-3700718_1280.jpg',
@@ -66,6 +72,7 @@ function Fruits() {
     },
     {
       id: 7,
+      Uniqueid:'F7',
       limit:8,
       title: "Watermelon",
       Image: 'https://cdn.pixabay.com/photo/2016/11/21/15/46/watermelon-1846051_960_720.jpg',
@@ -76,6 +83,7 @@ function Fruits() {
     },
     {
       id: 8,
+      Uniqueid:'F8',
       limit:15,
       title: "Alphanso Mango",
       Image: 'https://cdn.pixabay.com/photo/2016/04/10/15/13/mangoes-1320111_1280.jpg',
@@ -86,13 +94,14 @@ function Fruits() {
     }
   ];
 
+
   return (
     <div className="flex justify-center">
       <div className="w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-items-center gap-5 overflow-auto mt-10 mb-5">
         {Details.map((detail) => (
           <ProductCard 
             key={detail.id}
-            id={detail.id}
+            id={detail.Uniqueid}
             limit={detail.limit}
             Title={detail.title}
             Image={detail.Image}

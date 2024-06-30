@@ -5,10 +5,10 @@ import '../Navbar/Style.css';
 import { Context } from '../../Context/Context';
 import { NavLink } from 'react-router-dom';
 import { FaRegUserCircle } from 'react-icons/fa';
-import {  useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
-  const count = useSelector((state) => state.CartNumber.value); // Access the value property
+  const countFromRedux = useSelector((state) => state.CartNumber.value);
 
   const windowScroll = useContext(Context);
   const [toggle, setToggle] = useState('minimize');
@@ -30,6 +30,8 @@ function Navbar() {
       setPosition('sticky');
     }
   }, [windowScroll]);
+
+
 
   return (
     <>
@@ -76,7 +78,7 @@ function Navbar() {
                   className="absolute z-10 w-6 h-6 flex justify-center border rounded-full bg-lime-500 text-white"
                   style={{ right: '-25%', top: '-26%' }}
                 >
-                  {count}
+                  {countFromRedux}
                 </span>
               </NavLink>
               <NavLink to="Profile" onClick={handleNavLinkClick}>
@@ -126,7 +128,7 @@ function Navbar() {
                 className="absolute z-10 w-6 h-6 flex justify-center border border-lime-400 rounded-full bg-lime-500 text-white"
                 style={{ right: '-25%', top: '-26%' }}
               >
-                {count}
+                {countFromRedux}
               </span>
             </NavLink>
             <NavLink to="Profile" onClick={handleNavLinkClick}>

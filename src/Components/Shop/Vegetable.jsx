@@ -9,6 +9,7 @@ function Vegetable() {
   const Details=[
     {
       id:1,
+      Uniqueid:'V1',
       limit:5,
       title:"Potato",
       Image:Potato,
@@ -19,6 +20,7 @@ function Vegetable() {
     },
     {
       id:2,
+      Uniqueid:'V2',
       limit:10,
       title:"Tomato",
       Image:Tomato,
@@ -29,6 +31,7 @@ function Vegetable() {
     },
     {
       id:3,
+      Uniqueid:'V3',
       limit:8,
       title:"Caulifower",
       Image:Caulifower,
@@ -39,6 +42,7 @@ function Vegetable() {
     },
     {
       id:4,
+      Uniqueid:'V4',
       limit:50,
       title:"Mint",
       Image:Mint,
@@ -49,6 +53,7 @@ function Vegetable() {
     },
     {
       id:5,
+      Uniqueid:'V5',
       limit:50,
       title:"Mint",
       Image:Mint,
@@ -59,6 +64,7 @@ function Vegetable() {
     },
     {
       id:6,
+      Uniqueid:'V6',
       limit:50,
       title:"Mint",
       Image:Mint,
@@ -69,6 +75,7 @@ function Vegetable() {
     },
     {
       id:7,
+      Uniqueid:'V7',
       limit:50,
       title:"Mint",
       Image:Mint,
@@ -79,6 +86,7 @@ function Vegetable() {
     },
     {
       id:8,
+      Uniqueid:'V8',
       limit:50,
       title:"Mint",
       Image:Mint,
@@ -98,7 +106,7 @@ function Vegetable() {
             
               <ProductCard 
               key={details.id}
-              id={details.id}
+              id={details.Uniqueid}
               limit={details.limit}
               Title={details.title}
               Image={details.Image}

@@ -10,6 +10,7 @@ function DryFruits() {
   const Details=[
     {
       id:1,
+      Uniqueid:'DF1',
       limit:5,
       Title:"Pistachio",
       DiscountedPercent:'20%',
@@ -20,6 +21,7 @@ function DryFruits() {
     },
     {
       id:2,
+      Uniqueid:'DF2',
       limit:7,
       Title:"Almonds",
       DiscountedPercent:'12%',
@@ -30,6 +32,7 @@ function DryFruits() {
     },
     {
       id:3,
+      Uniqueid:'DF3',
       limit:10,
       Title:"Cashew",
       DiscountedPercent:'9%',
@@ -40,6 +43,7 @@ function DryFruits() {
     },
     {
       id:4,
+      Uniqueid:'DF4',
       limit:4,
       Title:"Walnut",
       DiscountedPercent:'22%',
@@ -50,6 +54,7 @@ function DryFruits() {
     },
     {
       id:5,
+      Uniqueid:'DF5',
       limit:6,
       Title:"Pistachio",
       DiscountedPercent:'20%',
@@ -60,6 +65,7 @@ function DryFruits() {
     },
     {
       id:6,
+      Uniqueid:'DF6',
       limit:7,
       Title:"Almonds",
       DiscountedPercent:'12%',
@@ -70,6 +76,7 @@ function DryFruits() {
     },
     {
       id:7,
+      Uniqueid:'DF7',
       limit:10,
       Title:"Cashew",
       DiscountedPercent:'9%',
@@ -80,6 +87,7 @@ function DryFruits() {
     },
     {
       id:8,
+      Uniqueid:'DF8',
       limit:4,
       Title:"Walnut",
       DiscountedPercent:'22%',
@@ -99,7 +107,7 @@ function DryFruits() {
                 Details.map((Details)=>(
                   <ProductCard
                     key={Details.id}
-                    id={Details.id}
+                    id={Details.Uniqueid}
                     limit={Details.limit}
                     Title={Details.Title}
                     Quantity={Details.Quantity}
